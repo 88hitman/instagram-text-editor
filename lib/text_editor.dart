@@ -176,6 +176,7 @@ class _TextEditorState extends State<TextEditor> {
                         child: Consumer<TextStyleModel>(
                           builder: (context, textStyleModel, child) {
                             return TextField(
+                              readOnly: true,
                               controller: TextEditingController()
                                 ..text = textStyleModel.text,
                               onChanged: (value) => textStyleModel.text = value,
